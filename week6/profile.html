@@ -1,0 +1,58 @@
+<html>
+<body><br><br>
+<script> 
+function validateForm()
+{
+var flag=1; 
+if(document.myform.name.value==""||
+document.myform.addr.value==""|| document.myform.phno.value==""|| document.myform.id.value==""|| document.myform.pwd.value=="")
+{
+alert("Enter all the details");
+flag=0;
+}
+var str=document.myform.phno.value;
+var x=new RegExp("\\d","g");
+if(!(str.match(x)))
+{
+if(!(str.length==10)) 
+flag=0;
+}
+var str1=document.myform.id.value;
+var x1=new RegExp("^[A-Z][a-zA-Z]+$","g"); 
+if(!(str1.match(x1)))
+{
+flag=0;
+alert("Invalid UserID");
+}
+var str1=document.myform.pwd.value; 
+var x1=new RegExp("^[A-Z][a-zA-Z]+$","g");
+if(!(str1.match(x1)))
+{
+  flag=0;
+  alert("Invalid password");
+}
+if(flag==1)
+{
+  alert("VALID INPUT");
+  window.open("payment.html","right");
+}
+else
+{
+alert("INVALIDINPUT");
+}
+}
+</script>
+<form name="myform">
+<div align="center"><pre>
+NAME:<input type="text" name="name"><br> ADDRESS :<input 
+type="type" name="addr"><br> CONTACT NUMBER:<input 
+type="text"name="phno"><br> LOGINID :<input 
+type="text"name="id"><br>
+PASSWORD :<input type="password"name="pwd"></pre><br><br>
+</div>
+<div align="center">
+<input type="button" value="ok" onClick="validateForm()">&nbsp;&nbsp;&nbsp;
+<input type="reset" value="clear">
+</form>
+</body>
+</html>

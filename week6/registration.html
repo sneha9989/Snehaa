@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function validateForm() {
+          var flag=1;
+          let x = document.myform.id1.value;
+          let y = document.myform.id2.value;
+          let z = document.myform.id3.value;
+          let x1 =document.myform.id4.value;
+          let x2 =document.myform.id5.value;
+          if (x == "" || y == "" || z =="" || x1 ==""|| x2==" " ) {
+            alert("data must be filled out");
+            flag=0;
+          }
+          if(flag==1)
+          {
+             alert("VALID INPUT");
+             window.open("login.html","right");
+          }
+          else{
+            alert("INVALID INPUT");
+          }
+        }
+        </script>
+
+</head>
+
+
+<body text align="center">
+<h2>JavaScript Validation</h2>
+<form name="myform">
+  FirstName: <input type="text" name="fname" id="id1"><br><br>
+  LastName: <input type="text" name="lname" id="id2"><br><br>
+  Username: <input type="text" name="username" id="id3"><br><br>
+  Password: <input type="password" name="password" id="id4"><br><br>
+  Address:<br>
+ <textarea rows="5" colums="10" name="textarea" id="id5"></textarea><br><br>
+ <input type="button" value="ok" onClick="validateForm()">
+ <input type="reset" value="clear" >
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm(){
+  var flag=1;
+    let x1 = document.myform.log.value
+    let x2 = document.myform.pwd.value
+    let x3 = document.myform.amt.value
+    let x4 = document.myform.id.value
+  if (x1 == "" || x2 =="" || x3=="" || x4=="") {
+    alert("data must be filled out");
+    flag=0;
+  }
+  if(flag==1)
+     {
+       alert("VALID INPUT");
+       
+     }
+    else
+    {
+         alert("INVALID INPUT");
+    }
+}
+ </script>
+</head>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form name="myForm">
+
+  Login Id: <input type="text" name="login id" id="log"><br><br>
+  Password: <input type="password" name="password" id="pwd"><br><br>
+  Amount:<input type="text" name="amount" id="amt"><br><br>
+  Creditcarddetails:<input type="text" name="credit number" maxlength="10" id="cd"><br><br>
+<input type="submit" value="Submit" onclick="validateForm()">
+</form>
+
+</body>
+</html>

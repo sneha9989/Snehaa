@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+            function validateForm()
+            {
+            var flag=1;
+            let x1=document.myform.id.value;
+            let x2=document.myform.pwd.value;
+            if(x1==""||x2=="")
+            {
+            alert("LoginId and Password must be filled")
+            flag=0;
+            }
+            if(flag==1)
+            {
+              alert("VALID INPUT");
+              window.open("profile.html","right");
+            }
+            else
+            {
+            alert("INVALID INPUT");
+            }
+            }
+            </script>
+    </head>
+
+<body text align="center"><br><br><br>
+<form name="myform">
+LOGIN ID:<input type="text" name="id"><br><br>
+PASSWORD:<input type="password" name="pwd"><br><br>
+<input type="button" value="ok" onClick="validateForm()">
+<input type="reset" value="clear" >
+</form>
+</body>
+</html>
